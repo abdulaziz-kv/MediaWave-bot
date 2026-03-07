@@ -1,0 +1,5 @@
+aiogram==3.17.0
+yt-dlp==2025.3.31
+python-dotenv==1.0.1
+aiofiles==24.1.0
+asyncio==3.4.3

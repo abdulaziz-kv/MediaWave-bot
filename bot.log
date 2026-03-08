@@ -1,0 +1,228 @@
+2026-03-08 14:04:27,811 - __main__ - INFO - Bot ishga tushmoqda...
+2026-03-08 14:04:28,403 - __main__ - INFO - Bot: @mediawavesbot (ID: 8686276832)
+2026-03-08 14:04:28,404 - __main__ - INFO - Admin: @abdulaziz_kv (ID: 8686276832)
+2026-03-08 14:04:28,404 - __main__ - WARNING - Admin ID bot ID bilan bir xil! Admin ID ni o'zgartiring!
+2026-03-08 14:04:28,404 - __main__ - INFO - Bot ishga tushdi. Linklarni qabul qilishni boshlaymiz...
+2026-03-08 14:04:28,404 - aiogram.dispatcher - INFO - Start polling
+2026-03-08 14:04:28,572 - aiogram.dispatcher - INFO - Run polling for bot @mediawavesbot id=8686276832 - 'MediaWave'
+2026-03-08 14:04:45,299 - aiogram.event - INFO - Update id=360318590 is handled. Duration 530 ms by bot id=8686276832
+2026-03-08 14:04:48,559 - aiogram.event - INFO - Update id=360318591 is handled. Duration 171 ms by bot id=8686276832
+2026-03-08 14:04:58,873 - aiogram.event - INFO - Update id=360318592 is handled. Duration 186 ms by bot id=8686276832
+2026-03-08 14:05:07,864 - __main__ - ERROR - Yuklashda xatolik: [0;31mERROR:[0m [Instagram] DUKvcebAPHf: Requested format is not available. Use --list-formats for a list of available formats
+2026-03-08 14:05:08,046 - aiogram.event - INFO - Update id=360318593 is handled. Duration 3625 ms by bot id=8686276832
+2026-03-08 14:07:36,994 - aiogram.event - INFO - Update id=360318594 is handled. Duration 218 ms by bot id=8686276832
+2026-03-08 14:09:21,343 - aiogram.dispatcher - INFO - Polling stopped
+2026-03-08 14:09:21,344 - aiogram.dispatcher - ERROR - Failed to fetch updates - TelegramNetworkError: HTTP Client says - ServerDisconnectedError: Server disconnected
+2026-03-08 14:09:21,344 - aiogram.dispatcher - WARNING - Sleep for 1.000000 seconds and try again... (tryings = 0, bot id = 8686276832)
+2026-03-08 14:09:21,601 - aiogram.dispatcher - INFO - Polling stopped for bot @mediawavesbot id=8686276832 - 'MediaWave'
+2026-03-08 14:09:21,602 - __main__ - INFO - Bot to�xtatildi
+2026-03-08 14:09:25,929 - __main__ - INFO - yt-dlp yangilandi
+2026-03-08 14:09:25,930 - __main__ - INFO - Bot ishga tushmoqda...
+2026-03-08 14:09:26,364 - __main__ - INFO - Bot: @mediawavesbot (ID: 8686276832)
+2026-03-08 14:09:26,364 - __main__ - INFO - Admin: @abdulaziz_kv (ID: 8686276832)
+2026-03-08 14:09:26,364 - __main__ - WARNING - Admin ID bot ID bilan bir xil! Admin ID ni o'zgartiring!
+2026-03-08 14:09:27,737 - __main__ - INFO - yt-dlp yangilandi
+2026-03-08 14:09:27,738 - __main__ - INFO - Bot ishga tushdi. Linklarni qabul qilishni boshlaymiz...
+2026-03-08 14:09:27,738 - aiogram.dispatcher - INFO - Start polling
+2026-03-08 14:09:27,873 - aiogram.dispatcher - INFO - Run polling for bot @mediawavesbot id=8686276832 - 'MediaWave'
+2026-03-08 14:09:53,506 - __main__ - INFO - Yuklandi: downloads\Video_by_dostonchik_____DUKvcebAPHf.mp4 (instagram)
+2026-03-08 14:09:53,698 - aiogram.event - INFO - Update id=360318595 is not handled. Duration 5594 ms by bot id=8686276832
+2026-03-08 14:09:53,698 - aiogram.event - ERROR - Cause exception while process update id=360318595 by bot id=8686276832
+ValueError: Unknown format code 'd' for object of type 'float'
+Traceback (most recent call last):
+  File "D:\mediawavebot\.venv\Lib\site-packages\aiogram\dispatcher\dispatcher.py", line 320, in _process_update
+    response = await self.feed_update(bot, update, **kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\mediawavebot\.venv\Lib\site-packages\aiogram\dispatcher\dispatcher.py", line 164, in feed_update
+    response = await self.update.wrap_outer_middleware(
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\mediawavebot\.venv\Lib\site-packages\aiogram\dispatcher\middlewares\error.py", line 27, in __call__
+    return await handler(event, data)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\mediawavebot\.venv\Lib\site-packages\aiogram\dispatcher\middlewares\user_context.py", line 58, in __call__
+    return await handler(event, data)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\mediawavebot\.venv\Lib\site-packages\aiogram\fsm\middleware.py", line 43, in __call__
+    return await handler(event, data)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\mediawavebot\.venv\Lib\site-packages\aiogram\dispatcher\event\telegram.py", line 126, in trigger
+    return await wrapped_inner(event, kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\mediawavebot\.venv\Lib\site-packages\aiogram\dispatcher\event\handler.py", line 71, in call
+    return await wrapped()
+           ^^^^^^^^^^^^^^^
+  File "D:\mediawavebot\.venv\Lib\site-packages\aiogram\dispatcher\dispatcher.py", line 283, in _listen_update
+    return await self.propagate_event(update_type=update_type, event=event, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\mediawavebot\.venv\Lib\site-packages\aiogram\dispatcher\router.py", line 161, in propagate_event
+    return await observer.wrap_outer_middleware(_wrapped, event=event, data=kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\mediawavebot\.venv\Lib\site-packages\aiogram\dispatcher\router.py", line 153, in _wrapped
+    return await self._propagate_event(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\mediawavebot\.venv\Lib\site-packages\aiogram\dispatcher\router.py", line 181, in _propagate_event
+    response = await observer.trigger(event, **kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\mediawavebot\.venv\Lib\site-packages\aiogram\dispatcher\event\telegram.py", line 126, in trigger
+    return await wrapped_inner(event, kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\mediawavebot\.venv\Lib\site-packages\aiogram\dispatcher\event\handler.py", line 71, in call
+    return await wrapped()
+           ^^^^^^^^^^^^^^^
+  File "D:\mediawavebot\bot.py", line 618, in handle_message
+    await process_video(message, url)
+  File "D:\mediawavebot\bot.py", line 649, in process_video
+    duration = f"{info['duration'] // 60}:{info['duration'] % 60:02d}" if info['duration'] else "Noma'lum"
+                                          ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+ValueError: Unknown format code 'd' for object of type 'float'
+2026-03-08 14:12:08,581 - aiogram.event - INFO - Update id=360318596 is handled. Duration 437 ms by bot id=8686276832
+2026-03-08 14:12:27,319 - aiogram.event - INFO - Update id=360318597 is handled. Duration 313 ms by bot id=8686276832
+2026-03-08 14:12:38,493 - __main__ - INFO - Yuklandi: downloads\Video_by_dostonchik_____DUKvcebAPHf.mp4 (instagram)
+2026-03-08 14:12:38,661 - aiogram.event - INFO - Update id=360318598 is not handled. Duration 3438 ms by bot id=8686276832
+2026-03-08 14:12:38,661 - aiogram.event - ERROR - Cause exception while process update id=360318598 by bot id=8686276832
+ValueError: Unknown format code 'd' for object of type 'float'
+Traceback (most recent call last):
+  File "D:\mediawavebot\.venv\Lib\site-packages\aiogram\dispatcher\dispatcher.py", line 320, in _process_update
+    response = await self.feed_update(bot, update, **kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\mediawavebot\.venv\Lib\site-packages\aiogram\dispatcher\dispatcher.py", line 164, in feed_update
+    response = await self.update.wrap_outer_middleware(
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\mediawavebot\.venv\Lib\site-packages\aiogram\dispatcher\middlewares\error.py", line 27, in __call__
+    return await handler(event, data)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\mediawavebot\.venv\Lib\site-packages\aiogram\dispatcher\middlewares\user_context.py", line 58, in __call__
+    return await handler(event, data)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\mediawavebot\.venv\Lib\site-packages\aiogram\fsm\middleware.py", line 43, in __call__
+    return await handler(event, data)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\mediawavebot\.venv\Lib\site-packages\aiogram\dispatcher\event\telegram.py", line 126, in trigger
+    return await wrapped_inner(event, kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\mediawavebot\.venv\Lib\site-packages\aiogram\dispatcher\event\handler.py", line 71, in call
+    return await wrapped()
+           ^^^^^^^^^^^^^^^
+  File "D:\mediawavebot\.venv\Lib\site-packages\aiogram\dispatcher\dispatcher.py", line 283, in _listen_update
+    return await self.propagate_event(update_type=update_type, event=event, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\mediawavebot\.venv\Lib\site-packages\aiogram\dispatcher\router.py", line 161, in propagate_event
+    return await observer.wrap_outer_middleware(_wrapped, event=event, data=kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\mediawavebot\.venv\Lib\site-packages\aiogram\dispatcher\router.py", line 153, in _wrapped
+    return await self._propagate_event(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\mediawavebot\.venv\Lib\site-packages\aiogram\dispatcher\router.py", line 181, in _propagate_event
+    response = await observer.trigger(event, **kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\mediawavebot\.venv\Lib\site-packages\aiogram\dispatcher\event\telegram.py", line 126, in trigger
+    return await wrapped_inner(event, kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\mediawavebot\.venv\Lib\site-packages\aiogram\dispatcher\event\handler.py", line 71, in call
+    return await wrapped()
+           ^^^^^^^^^^^^^^^
+  File "D:\mediawavebot\bot.py", line 618, in handle_message
+    await process_video(message, url)
+  File "D:\mediawavebot\bot.py", line 649, in process_video
+    duration = f"{info['duration'] // 60}:{info['duration'] % 60:02d}" if info['duration'] else "Noma'lum"
+                                          ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+ValueError: Unknown format code 'd' for object of type 'float'
+2026-03-08 14:15:37,586 - aiogram.dispatcher - ERROR - Failed to fetch updates - TelegramNetworkError: HTTP Client says - Request timeout error
+2026-03-08 14:15:37,587 - aiogram.dispatcher - WARNING - Sleep for 1.000000 seconds and try again... (tryings = 0, bot id = 8686276832)
+2026-03-08 14:15:49,100 - aiogram.dispatcher - INFO - Connection established (tryings = 1, bot id = 8686276832)
+2026-03-08 14:16:03,513 - aiogram.dispatcher - INFO - Polling stopped
+2026-03-08 14:16:03,514 - aiogram.dispatcher - ERROR - Failed to fetch updates - TelegramNetworkError: HTTP Client says - ServerDisconnectedError: Server disconnected
+2026-03-08 14:16:03,514 - aiogram.dispatcher - WARNING - Sleep for 1.000000 seconds and try again... (tryings = 0, bot id = 8686276832)
+2026-03-08 14:16:03,775 - aiogram.dispatcher - INFO - Polling stopped for bot @mediawavesbot id=8686276832 - 'MediaWave'
+2026-03-08 14:16:03,776 - __main__ - INFO - Bot to�xtatildi
+2026-03-08 14:16:07,806 - __main__ - INFO - yt-dlp yangilandi
+2026-03-08 14:16:07,807 - __main__ - INFO - Bot ishga tushmoqda...
+2026-03-08 14:16:08,248 - __main__ - INFO - Bot: @mediawavesbot (ID: 8686276832)
+2026-03-08 14:16:08,248 - __main__ - INFO - Admin: @abdulaziz_kv (ID: 8686276832)
+2026-03-08 14:16:08,248 - __main__ - WARNING - Admin ID bot ID bilan bir xil! Admin ID ni o'zgartiring!
+2026-03-08 14:16:09,480 - __main__ - INFO - yt-dlp yangilandi
+2026-03-08 14:16:09,480 - __main__ - INFO - Bot ishga tushdi. Linklarni qabul qilishni boshlaymiz...
+2026-03-08 14:16:09,480 - aiogram.dispatcher - INFO - Start polling
+2026-03-08 14:16:09,621 - aiogram.dispatcher - INFO - Run polling for bot @mediawavesbot id=8686276832 - 'MediaWave'
+2026-03-08 14:16:18,291 - aiogram.event - INFO - Update id=360318599 is handled. Duration 563 ms by bot id=8686276832
+2026-03-08 14:16:25,002 - __main__ - INFO - Yuklandi: downloads\Video_by_dostonchik_____DUKvcebAPHf.mp4 (instagram)
+2026-03-08 14:16:27,666 - __main__ - INFO - Fayl o'chirildi: downloads\Video_by_dostonchik_____DUKvcebAPHf.mp4
+2026-03-08 14:16:27,666 - aiogram.event - INFO - Update id=360318600 is handled. Duration 6157 ms by bot id=8686276832
+2026-03-08 14:20:50,129 - aiogram.dispatcher - INFO - Polling stopped
+2026-03-08 14:20:50,130 - aiogram.dispatcher - ERROR - Failed to fetch updates - TelegramNetworkError: HTTP Client says - ServerDisconnectedError: Server disconnected
+2026-03-08 14:20:50,130 - aiogram.dispatcher - WARNING - Sleep for 1.000000 seconds and try again... (tryings = 0, bot id = 8686276832)
+2026-03-08 14:20:50,395 - aiogram.dispatcher - INFO - Polling stopped for bot @mediawavesbot id=8686276832 - 'MediaWave'
+2026-03-08 14:20:50,396 - __main__ - INFO - Bot to�xtatildi
+2026-03-08 14:20:55,532 - __main__ - INFO - yt-dlp yangilandi
+2026-03-08 14:20:55,534 - __main__ - INFO - Bot ishga tushmoqda...
+2026-03-08 14:20:56,217 - __main__ - INFO - Bot: @mediawavesbot (ID: 8686276832)
+2026-03-08 14:20:56,217 - __main__ - INFO - Admin: @abdulaziz_kv (ID: 8686276832)
+2026-03-08 14:20:56,217 - __main__ - WARNING - Admin ID bot ID bilan bir xil! Admin ID ni o'zgartiring!
+2026-03-08 14:20:57,437 - __main__ - INFO - yt-dlp yangilandi
+2026-03-08 14:20:57,437 - __main__ - INFO - Bot ishga tushdi. Linklarni qabul qilishni boshlaymiz...
+2026-03-08 14:20:57,437 - aiogram.dispatcher - INFO - Start polling
+2026-03-08 14:20:57,592 - aiogram.dispatcher - INFO - Run polling for bot @mediawavesbot id=8686276832 - 'MediaWave'
+2026-03-08 14:21:11,878 - aiogram.event - INFO - Update id=360318601 is handled. Duration 452 ms by bot id=8686276832
+2026-03-08 14:21:22,338 - __main__ - INFO - Yuklandi: downloads\Video_by_dostonchik_____DUKvcebAPHf.mp4 (instagram)
+2026-03-08 14:21:24,761 - aiogram.event - INFO - Update id=360318602 is handled. Duration 8545 ms by bot id=8686276832
+2026-03-08 14:21:35,273 - __main__ - ERROR - Yuklashda xatolik (instagram): [0;31mERROR:[0m Postprocessing: ffprobe and ffmpeg not found. Please install or provide the path using --ffmpeg-location
+2026-03-08 14:21:35,587 - aiogram.event - INFO - Update id=360318603 is handled. Duration 6094 ms by bot id=8686276832
+2026-03-08 14:21:42,259 - aiogram.event - INFO - Update id=360318604 is handled. Duration 2420 ms by bot id=8686276832
+2026-03-08 14:22:36,441 - aiogram.dispatcher - INFO - Polling stopped
+2026-03-08 14:22:36,443 - aiogram.dispatcher - ERROR - Failed to fetch updates - TelegramNetworkError: HTTP Client says - ServerDisconnectedError: Server disconnected
+2026-03-08 14:22:36,444 - aiogram.dispatcher - WARNING - Sleep for 1.000000 seconds and try again... (tryings = 0, bot id = 8686276832)
+2026-03-08 14:22:36,702 - aiogram.dispatcher - INFO - Polling stopped for bot @mediawavesbot id=8686276832 - 'MediaWave'
+2026-03-08 14:22:36,704 - __main__ - INFO - Bot to�xtatildi
+2026-03-08 14:41:15,090 - __main__ - WARNING - imageio-ffmpeg o'rnatilmagan
+2026-03-08 14:41:15,090 - __main__ - ERROR - FFmpeg topilmadi! Audio yuklash ishlamaydi.
+2026-03-08 14:41:15,090 - __main__ - WARNING - ⚠️ FFmpeg topilmadi! Audio yuklash ishlamaydi.
+2026-03-08 14:41:16,470 - __main__ - INFO - ✅ yt-dlp yangilandi
+2026-03-08 14:41:16,471 - __main__ - INFO - 🚀 Bot ishga tushmoqda...
+2026-03-08 14:41:16,894 - __main__ - INFO - 🤖 Bot: @mediawavesbot (ID: 8686276832)
+2026-03-08 14:41:16,894 - __main__ - INFO - 👤 Admin: @abdulaziz_kv (ID: 8686276832)
+2026-03-08 14:41:16,894 - __main__ - INFO - 🎯 FFmpeg: ❌ Topilmadi
+2026-03-08 14:41:16,894 - __main__ - WARNING - ⚠️ Admin ID bot ID bilan bir xil! Admin ID ni o'zgartiring!
+2026-03-08 14:41:16,895 - __main__ - INFO - 📁 downloads: 5 fayl
+2026-03-08 14:41:16,895 - __main__ - INFO - 📁 temp: 0 fayl
+2026-03-08 14:41:16,895 - __main__ - INFO - ✅ Bot ishga tushdi. Linklarni qabul qilishni boshlaymiz...
+2026-03-08 14:41:16,895 - aiogram.dispatcher - INFO - Start polling
+2026-03-08 14:41:17,031 - aiogram.dispatcher - INFO - Run polling for bot @mediawavesbot id=8686276832 - 'MediaWave'
+2026-03-08 14:41:40,171 - aiogram.event - INFO - Update id=360318608 is handled. Duration 437 ms by bot id=8686276832
+2026-03-08 14:41:49,657 - __main__ - INFO - ✅ Yuklandi: Video_by_dostonchik_____DUKvcebAPHf.mp4 (instagram)
+2026-03-08 14:41:52,328 - aiogram.event - INFO - Update id=360318609 is handled. Duration 6500 ms by bot id=8686276832
+2026-03-08 14:41:54,238 - aiogram.event - INFO - Update id=360318610 is handled. Duration 390 ms by bot id=8686276832
+2026-03-08 14:42:03,030 - aiogram.event - INFO - Update id=360318611 is handled. Duration 140 ms by bot id=8686276832
+2026-03-08 14:42:39,632 - aiogram.dispatcher - INFO - Polling stopped
+2026-03-08 14:42:39,633 - aiogram.dispatcher - ERROR - Failed to fetch updates - TelegramNetworkError: HTTP Client says - ServerDisconnectedError: Server disconnected
+2026-03-08 14:42:39,634 - aiogram.dispatcher - WARNING - Sleep for 1.000000 seconds and try again... (tryings = 0, bot id = 8686276832)
+2026-03-08 14:42:39,895 - aiogram.dispatcher - INFO - Polling stopped for bot @mediawavesbot id=8686276832 - 'MediaWave'
+2026-03-08 14:42:39,898 - __main__ - INFO - 👋 Bot to‘xtatildi
+2026-03-08 14:44:16,756 - __main__ - INFO - FFmpeg topildi (imageio): D:\mediawavebot\.venv\Lib\site-packages\imageio_ffmpeg\binaries\ffmpeg-win-x86_64-v7.1.exe
+2026-03-08 14:44:16,756 - __main__ - INFO - ✅ FFmpeg muvaffaqiyatli topildi: D:\mediawavebot\.venv\Lib\site-packages\imageio_ffmpeg\binaries\ffmpeg-win-x86_64-v7.1.exe
+2026-03-08 14:44:18,348 - __main__ - INFO - ✅ yt-dlp yangilandi
+2026-03-08 14:44:18,349 - __main__ - INFO - 🚀 Bot ishga tushmoqda...
+2026-03-08 14:44:18,762 - __main__ - INFO - 🤖 Bot: @mediawavesbot (ID: 8686276832)
+2026-03-08 14:44:18,762 - __main__ - INFO - 👤 Admin: @abdulaziz_kv (ID: 8686276832)
+2026-03-08 14:44:18,762 - __main__ - INFO - 🎯 FFmpeg: ✅ Topildi
+2026-03-08 14:44:18,762 - __main__ - WARNING - ⚠️ Admin ID bot ID bilan bir xil! Admin ID ni o'zgartiring!
+2026-03-08 14:44:18,763 - __main__ - INFO - 📁 downloads: 5 fayl
+2026-03-08 14:44:18,763 - __main__ - INFO - 📁 temp: 0 fayl
+2026-03-08 14:44:18,763 - __main__ - INFO - ✅ Bot ishga tushdi. Linklarni qabul qilishni boshlaymiz...
+2026-03-08 14:44:18,763 - aiogram.dispatcher - INFO - Start polling
+2026-03-08 14:44:18,890 - aiogram.dispatcher - INFO - Run polling for bot @mediawavesbot id=8686276832 - 'MediaWave'
+2026-03-08 14:44:29,577 - aiogram.event - INFO - Update id=360318612 is handled. Duration 421 ms by bot id=8686276832
+2026-03-08 14:44:39,195 - __main__ - INFO - ✅ Yuklandi: Video_by_dostonchik_____DUKvcebAPHf.mp4 (instagram)
+2026-03-08 14:44:41,482 - aiogram.event - INFO - Update id=360318613 is handled. Duration 7421 ms by bot id=8686276832
+2026-03-08 14:44:47,740 - __main__ - INFO - ✅ Yuklandi: Video_by_dostonchik_____DUKvcebAPHf.mp3 (instagram)
+2026-03-08 14:44:48,835 - __main__ - INFO - 🗑 Fayl o'chirildi: Video_by_dostonchik_____DUKvcebAPHf.mp3
+2026-03-08 14:44:48,980 - aiogram.event - INFO - Update id=360318614 is handled. Duration 5655 ms by bot id=8686276832
+2026-03-08 14:44:57,142 - aiogram.event - INFO - Update id=360318615 is handled. Duration 2500 ms by bot id=8686276832
+2026-03-08 14:45:00,810 - aiogram.event - INFO - Update id=360318616 is handled. Duration 438 ms by bot id=8686276832
+2026-03-08 14:45:03,330 - aiogram.event - INFO - Update id=360318617 is handled. Duration 344 ms by bot id=8686276832
+2026-03-08 14:45:07,034 - aiogram.event - INFO - Update id=360318618 is handled. Duration 313 ms by bot id=8686276832
+2026-03-08 14:45:09,848 - aiogram.event - INFO - Update id=360318619 is handled. Duration 452 ms by bot id=8686276832
+2026-03-08 14:45:19,907 - aiogram.dispatcher - INFO - Polling stopped
+2026-03-08 14:45:19,908 - aiogram.dispatcher - ERROR - Failed to fetch updates - TelegramNetworkError: HTTP Client says - ServerDisconnectedError: Server disconnected
+2026-03-08 14:45:19,908 - aiogram.dispatcher - WARNING - Sleep for 1.000000 seconds and try again... (tryings = 0, bot id = 8686276832)
+2026-03-08 14:45:20,164 - aiogram.dispatcher - INFO - Polling stopped for bot @mediawavesbot id=8686276832 - 'MediaWave'
+2026-03-08 14:45:20,165 - __main__ - INFO - 👋 Bot to‘xtatildi

@@ -931,28 +931,69 @@ async def scheduled_cleanup():
 
 
 # ---------------- Run Bot ----------------
+# ---------------- Run Bot ----------------
+async def delete_webhook():
+    """Webhook ni o'chirish"""
+    try:
+        await bot.delete_webhook(drop_pending_updates=True)
+        logger.info("✅ Webhook o'chirildi")
+        return True
+    except Exception as e:
+        logger.error(f"❌ Webhook o'chirishda xatolik: {e}")
+        return False
+
+
 async def main():
     logger.info("🚀 Bot ishga tushmoqda...")
 
     try:
+        # 1. AVVAL WEBHOOK NI O'CHIRISH (ENG MUHIM!)
+        await delete_webhook()
+
+        # 2. Bot ma'lumotlarini olish
         bot_info = await bot.get_me()
         logger.info(f"🤖 Bot: @{bot_info.username} (ID: {bot_info.id})")
         logger.info(f"👤 Admin: @{ADMIN_USERNAME} (ID: {ADMIN_ID})")
-        logger.info(f"🎯 FFmpeg: {'✅ Topildi' if FFMPEG_PATH else '❌ Topilmadi'}")
 
-        if ADMIN_ID == bot_info.id:
-            logger.warning("⚠️ Admin ID bot ID bilan bir xil! Admin ID ni o'zgartiring!")
+        # 3. FFmpeg ni tekshirish
+        if FFMPEG_PATH:
+            logger.info(f"✅ FFmpeg topildi: {FFMPEG_PATH}")
+        else:
+            logger.warning("⚠️ FFmpeg topilmadi! Audio yuklash ishlamaydi.")
 
-        # Papkalarni tekshirish
+        # 4. Papkalarni tekshirish
         for folder in [downloader.download_dir, downloader.temp_dir]:
             if os.path.exists(folder):
                 file_count = len([f for f in os.listdir(folder) if os.path.isfile(os.path.join(folder, f))])
                 logger.info(f"📁 {folder}: {file_count} fayl")
 
-        # Scheduled task ni ishga tushirish
+        # 5. Scheduled task ni ishga tushirish
         asyncio.create_task(scheduled_cleanup())
 
-        logger.info("✅ Bot ishga tushdi. Linklarni qabul qilishni boshlaymiz...")
+        # 6. Health check server (Render uchun)
+        try:
+            from fastapi import FastAPI
+            import uvicorn
+            import threading
+
+            app = FastAPI()
+
+            @app.get("/")
+            @app.get("/healthz")
+            @app.get("/health")
+            async def health_check():
+                return {"status": "alive", "bot": "MediaWave", "time": datetime.now().isoformat()}
+
+            def run_web_server():
+                uvicorn.run(app, host="0.0.0.0", port=10000)
+
+            threading.Thread(target=run_web_server, daemon=True).start()
+            logger.info("✅ Health check server ishga tushdi (port 10000)")
+        except Exception as e:
+            logger.warning(f"⚠️ Health check server ishga tushmadi: {e}")
+
+        # 7. POLLING NI BOSHLASH (WEBHOOK O'CHIRILGANDAN KEYIN)
+        logger.info("✅ Bot ishga tushdi. Polling boshlanmoqda...")
         await dp.start_polling(bot)
 
     except Exception as e:
